@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::apiResource('usuarios', 'UsuarioController');
 Route::apiResource('libros','LibroController');
 Route::apiResource('libroprestado','LibroPrestadoController');
+Route::apiResource('usuarios.libros', 'UsuarioLibroController');
+
 
 Route::group([
     'middleware' => 'api',
