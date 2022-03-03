@@ -24,8 +24,8 @@ class UsuarioLibroController extends Controller
         return $this->showOne($usuario);
     }
 
-    public function destroy(Usuario $usuario, Libro $libro, $id) {
-        $usuario->libros()->detach($libro->id);
+    public function destroy(Usuario $usuario, Libro $libro) {
+        $usuario->libros()->detach($libro->id_libro);
         return $this->showOne($usuario);
     }
 }
